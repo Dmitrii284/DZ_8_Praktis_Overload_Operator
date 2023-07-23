@@ -36,6 +36,7 @@ void IpAdress::readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip
 	_ip_octet4 = std::stoi(ipString);
 }
 
+
 bool IpAdress::ValidAddress()
 {	
 	
