@@ -1,4 +1,4 @@
-#include "IP_Address.h"
+п»ї#include "IP_Address.h"
 
 
 
@@ -7,11 +7,11 @@ IpAdress::IpAdress(uint8_t ip_octet1, uint8_t ip_octet2, uint8_t ip_octet3, uint
 
 //IpAdress IpAdress::IpStringConstruct()
 //{
-//	std::vector<std::string>ipAdresses;			//  Создадим вектор
+//	std::vector<std::string>ipAdresses;			//  РЎРѕР·РґР°РґРёРј РІРµРєС‚РѕСЂ
 //	std::string ipString;						// 
 //	std::stringstream octec{}(readFromInput()); //
 //	std::string segment;
-//	while (std::getline(octec, segment, '.')) { // Каждыйсегмент вектора поме
+//	while (std::getline(octec, segment, '.')) { // РљР°Р¶РґС‹Р№СЃРµРіРјРµРЅС‚ РІРµРєС‚РѕСЂР° РїРѕРјРµ
 //		ipAdresses.push_back(segment);
 //	}
 //	for (std::string& ip : ipAdresses)
@@ -23,7 +23,7 @@ void IpAdress::readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip
 	std::cout << " Enter an IP- address in the format: XXX.XXX.XXX.XXX ->";
 	std::string ipString;
 	std::cin >> ipString;
-	// Разделяем строку на октеты по символу точки и строковые значения _ip_octet переводим в числовые stoi
+	// Р Р°Р·РґРµР»СЏРµРј СЃС‚СЂРѕРєСѓ РЅР° РѕРєС‚РµС‚С‹ РїРѕ СЃРёРјРІРѕР»Сѓ С‚РѕС‡РєРё Рё СЃС‚СЂРѕРєРѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ _ip_octet РїРµСЂРµРІРѕРґРёРј РІ С‡РёСЃР»РѕРІС‹Рµ stoi
 	std::size_t pos = ipString.find('.');
 	_ip_octet1 = std::stoi(ipString.substr(0, pos));
 	ipString = ipString.substr(pos + 1);
@@ -43,9 +43,9 @@ bool IpAdress::ValidAddress()
 		_ip_octet2 < 0 || _ip_octet2 > 255 ||
 		_ip_octet3 < 0 || _ip_octet3 > 255 ||
 		_ip_octet4 < 0 || _ip_octet4 > 255) {
-		std::cout << "Введенный IP-адрес является валидным." << std::endl;
+		std::cout << "Р’РІРµРґРµРЅРЅС‹Р№ IP-Р°РґСЂРµСЃ СЏРІР»СЏРµС‚СЃСЏ РІР°Р»РёРґРЅС‹Рј." << std::endl;
 		return true;
 	}
-	std::cout << "Введенный IP-адрес не является валидным." << std::endl;
+	std::cout << "Р’РІРµРґРµРЅРЅС‹Р№ IP-Р°РґСЂРµСЃ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РІР°Р»РёРґРЅС‹Рј." << std::endl;
 	return false;
 }

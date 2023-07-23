@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #ifndef _IP_ADDRESS_H_
 #define _IP_ADDRESS_H_
 #include"mask.h"
@@ -17,12 +17,12 @@ public:
 	IpAdress() = default;	
 	IpAdress(uint8_t ip_octet1, uint8_t ip_octet2, uint8_t ip_octet3, uint8_t ip_octet4);
 
-	void readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip_octet3, uint8_t _ip_octet4); // Ввод адреса с консоли
+	void readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip_octet3, uint8_t _ip_octet4); // Р’РІРѕРґ Р°РґСЂРµСЃР° СЃ РєРѕРЅСЃРѕР»Рё
 	//void IpStringConstruct(); 
-	// Метод - член класса. Проверка адреса (чтобы введенные цифры лежали в диапазоне 0 до 255) и (соответствует формату xxx.xxx.xxx.xxx )
+	// РњРµС‚РѕРґ - С‡Р»РµРЅ РєР»Р°СЃСЃР°. РџСЂРѕРІРµСЂРєР° Р°РґСЂРµСЃР° (С‡С‚РѕР±С‹ РІРІРµРґРµРЅРЅС‹Рµ С†РёС„СЂС‹ Р»РµР¶Р°Р»Рё РІ РґРёР°РїР°Р·РѕРЅРµ 0 РґРѕ 255) Рё (СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ С„РѕСЂРјР°С‚Сѓ xxx.xxx.xxx.xxx )
 	bool ValidAddress(); 			
 	//IpAdress IpStringConstruct();			
-	// Разделяем строку на октеты по символу точки
+	// Р Р°Р·РґРµР»СЏРµРј СЃС‚СЂРѕРєСѓ РЅР° РѕРєС‚РµС‚С‹ РїРѕ СЃРёРјРІРѕР»Сѓ С‚РѕС‡РєРё
 
 	bool operator==(const IpAdress& other) const
 	{
@@ -41,7 +41,7 @@ public:
 //        std::string ipString;
 //        std::cin >> ipString;
 //
-//        // Разделяем строку на октеты по символу точки
+//        // Р Р°Р·РґРµР»СЏРµРј СЃС‚СЂРѕРєСѓ РЅР° РѕРєС‚РµС‚С‹ РїРѕ СЃРёРјРІРѕР»Сѓ С‚РѕС‡РєРё
 //        std::size_t pos = ipString.find('.');
 //        octet1 = std::stoi(ipString.substr(0, pos));
 //        ipString = ipString.substr(pos + 1);
@@ -68,14 +68,14 @@ public:
 //
 //int main() {
 //    IPAddress ip;
-//    std::cout << "Введите IP-адрес в формате xxx.xxx.xxx.xxx: ";
+//    std::cout << "Р’РІРµРґРёС‚Рµ IP-Р°РґСЂРµСЃ РІ С„РѕСЂРјР°С‚Рµ xxx.xxx.xxx.xxx: ";
 //    ip.readFromInput();
 //
 //    if (ip.isValid()) {
-//        std::cout << "Введенный IP-адрес является валидным." << std::endl;
+//        std::cout << "Р’РІРµРґРµРЅРЅС‹Р№ IP-Р°РґСЂРµСЃ СЏРІР»СЏРµС‚СЃСЏ РІР°Р»РёРґРЅС‹Рј." << std::endl;
 //    }
 //    else {
-//        std::cout << "Введенный IP-адрес не является валидным." << std::endl;
+//        std::cout << "Р’РІРµРґРµРЅРЅС‹Р№ IP-Р°РґСЂРµСЃ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РІР°Р»РёРґРЅС‹Рј." << std::endl;
 //    }
 //
 //    return 0;

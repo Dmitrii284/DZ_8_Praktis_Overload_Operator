@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef _MASK_H_
 #define _MASK_H_
 #include"IP_Address.h"
