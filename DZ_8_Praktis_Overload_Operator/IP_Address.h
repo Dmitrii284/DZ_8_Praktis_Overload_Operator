@@ -2,7 +2,6 @@
 #ifndef _IP_ADDRESS_H_
 #define _IP_ADDRESS_H_
 #include"mask.h"
-#include"Functions.h"
 #include<iostream>
 #include<string>
 
@@ -17,10 +16,10 @@ public:
 	IpAdress() = default;	
 	IpAdress(uint8_t ip_octet1, uint8_t ip_octet2, uint8_t ip_octet3, uint8_t ip_octet4);
 
-	void readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip_octet3, uint8_t _ip_octet4); // Ввод адреса с консоли
+	//void readFromInput(uint8_t _ip_octet1, uint8_t _ip_octet2, uint8_t _ip_octet3, uint8_t _ip_octet4); // Ввод адреса с консоли
 	//void IpStringConstruct(); 
 	// Метод - член класса. Проверка адреса (чтобы введенные цифры лежали в диапазоне 0 до 255) и (соответствует формату xxx.xxx.xxx.xxx )
-	bool ValidAddress(); 			
+	bool ValidAddress();
 	//IpAdress IpStringConstruct();			
 	// Разделяем строку на октеты по символу точки
 
@@ -28,9 +27,12 @@ public:
 	{
 		return _ip_octet1 == other._ip_octet1 && _ip_octet2 == other._ip_octet2 && _ip_octet3 == other._ip_octet3 && _ip_octet4 == other._ip_octet4;
 	}
+
+	friend std::istream& operator>>(std::istream& input, IpAdress& obj);
+	
 };
 
-
+std::istream& operator>>(std::istream& input, IpAdress& obj);
 
 //
 //class IPAddress {

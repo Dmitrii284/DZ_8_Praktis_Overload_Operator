@@ -29,9 +29,6 @@
     <ClInclude Include="mask.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Functions.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="IP_Address.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>

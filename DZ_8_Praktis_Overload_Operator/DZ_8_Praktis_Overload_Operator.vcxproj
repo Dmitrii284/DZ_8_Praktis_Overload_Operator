@@ -132,7 +132,6 @@
     <ClCompile Include="mask.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Functions.h" />
     <ClInclude Include="mask.h" />
     <ClInclude Include="IP_Address.h" />
   </ItemGroup>

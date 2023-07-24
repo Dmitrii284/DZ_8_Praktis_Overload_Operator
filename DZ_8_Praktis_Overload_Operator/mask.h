@@ -2,7 +2,6 @@
 #ifndef _MASK_H_
 #define _MASK_H_
 #include"IP_Address.h"
-#include"Functions.h"
 #include<vector>
 
 class Mack
